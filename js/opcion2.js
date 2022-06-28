@@ -211,9 +211,9 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	const agregarCero = valor => {
-		if (valor < 10) {
+		if (valor < 10){
 			return "0" + valor;
-		} else {
+		} else{
 			return "" + valor;
 		}
 	}
@@ -255,7 +255,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	};
 	const trazarMarcas = () => {
 		$numerosMarcas.innerHTML = "";
-		for (const [indice, marca] of marcas.entries()) {
+		for (const [indice, marca] of marcas.entries()){
 			const $li = document.createElement("p");
 			$li.innerHTML = `<strong class="is-size-4">${marcas.length - indice}.</strong> ${milisegundosAMinutosYSegundos(marca)}`;
 			$li.classList.add("is-size-3");
@@ -264,7 +264,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	};
 
 	const detenerCron = () => {
-		if (!confirm("¿Está seguro(a) que quiere reiniciar?")) {
+		if (!confirm("¿Está seguro(a) que quiere reiniciar?")){
 			return;
 		}
 		clearInterval(idInterval);
