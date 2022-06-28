@@ -1,0 +1,140 @@
+<!--<title>Resolviendo Ecuaciones de 2°</title>
+	<style>
+		.contenedor{
+			background-color: rosybrown;
+			width: 50%;
+			height: 70vh; /*viuhay reduce al tamaño de pantalla */
+			margin: auto;
+			padding: 50px;
+		}
+		
+	</style>
+</head>
+ <body bgcolor="#49BFAA">
+	<div class="contenedor">
+		<div id="principal">
+			<center><h1>WebMat</h1></center>
+			<b><p>Fecha: <span style="color:#8509fa" id="fecha"></span></p></b><hr>
+			<h2>Ecuación de segundo grado:</h2>
+			<b> ax&#178;+bx+c=0
+			<br><br>
+			a: <input type="text" id="dato1" placeholder="    Ingresa dato 1">
+			   <button onclick="limpiar();"><b>Limpiar</b></button><br><br>
+        	b: <input type="text" id="dato2" placeholder="    Ingrese dato 2"><br><br>
+			c: <input type="text" id="dato3" placeholder="    Ingrese dato 3"><br><br></b>
+			<button onclick="calcular();"><b>Calcular</b></button><br><br>
+			<b><p style="color:blue;">X&#185; : <i style="color:red;"><span id="respuesta1"></span></i></p>
+			<b><p style="color:blue;">X&#178; : <i style="color:red;"><span id="respuesta2"></span></i></p>
+
+		</div>
+	</div>
+	<br><br>
+	<h2 align="right"><span id="hora"></span></h2> -->  
+
+	<!--<title>operacion logica</title>
+	<style>
+		.contenedor{
+			background-color: rosybrown;
+			width: 50%;
+			height: 70vh; /*viuhay reduce al tamaño de pantalla */
+			margin: auto;
+			padding: 50px;
+		}
+		
+	</style>
+</head>
+<body bgcolor="#49BFAA">
+	<div class="contenedor">
+		<div id="principal">
+			<center><h1>WebMat</h1></center>
+			<b><p>Fecha: <span style="color:#8509fa" id="fecha"></span></p></b><hr>
+			<h2>Ecuación de segundo grado:</h2>
+			<b> ax&#178;+bx+c=0
+			<br><br> <form action="">
+			a: <input type="text" id="dato1" placeholder="    Ingresa dato 1">
+			   <button onclick="borrar();"><b>Borrar</b></button><br><br>
+        	b: <input type="text" id="dato2" placeholder="    Ingrese dato 2"><br><br>
+			c: <input type="text" id="dato3" placeholder="    Ingrese dato 3"><br><br></b></form>
+			<button onclick="calcular();"><b>Calcular</b></button><br><br>
+			<b><p style="color:blue;">X&#185; : <i style="color:red;"><span id="respuesta1"></span></i></p>
+			<b><p style="color:blue;">X&#178; : <i style="color:red;"><span id="respuesta2"></span></i></p>
+
+		</div>
+	</div>
+	<br><br>
+	<h2 align="right"><span id="hora"></span></h2> 
+				
+
+		 </div>
+        <script src="../practica_04/practica.js"></script>
+	</div>
+	<br><br>
+	<h2 align="right"><span id="hora"></span></h2> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Metodos de Array</title>
+	<style>
+		.mdi {
+			font-size: 2rem;
+		}
+
+		#tiempoTranscurrido {
+			font-size: 3rem;
+		}
+	</style>
+</head>
+<body bgcolor = "#49BFAA">
+	<h1>Trabajando con Array</h1>
+<hr>
+<h2><i style="color:hsl(0, 98%, 50%);"><marquee> Cronómetro-Rayner 🧐</marquee></i></h2>
+<center>
+	<section class="section">
+		<div class="columns">
+			<div class="column has-text-centered">
+				<h2 id="tiempoTranscurrido"></h2>
+				<button class="button is-success is-large" id="Iniciar"><span class="play">▶</span></button>
+				<button class="button is-success is-large" id="Pausar"><span class="mdi mdi-pause">⏸</span></button>
+				<button class="button is-primary is-large" id="Marca"><span class="flag">✔</span></button>
+				<button class="button is-warning is-large" id="Detener"><span class="mdi mdi-stop">⏹</span></button>
+				<div id="numerosMarcas">
+				</div>
+			</div>
+		</div>
+	</section>
+</center>
+<!-- ========================================================================================================== -->
+<hr>
+	<h2>Ejercio de Arrays</h2>
+	<p>Introduce numeros separados por comas</p>
+	<input type="text" id="numerosEjem"></input>
+	<input type="button" value="Cargar ejemplo" onclick="cargarEjemplo();"></input>
+	<br><br><input type="button" value="Calcular"  onclick="calcular();">
+	<br><br><input type="button" value="Reiniciar" onclick="reiniciar();">
+    <p id="Resultado"></p>
+	<!-- ======================================================================================================= -->
+<hr>
+	<b><p id="frases"></p></b>
+	<!-- ======================================================================================================= -->
+<hr>
+	<form>
+	<input type="text" id="colores" placeholder="Ingrese colores"></input>
+	<button onclick="agregaColor(event);">Insertar</button><br>
+	</form>	
+	<div>
+		<ul id="listaC">
+
+		</ul>
+	</div>
+	<!-- ======================================================================================================= -->
+<hr>
+	<h2><i><span id="hora" style="color:hsl(0, 98%, 50%);"></span>  ••••••••••••••••••••••••••••••••••••••••••••••••👈Hora<===>Fecha👉••••••••••••••••••••••••••••••••••••••••••••••••  <span id="fecha" style="color:hsl(0, 98%, 48%);"></span></i></h2>
+
+	<script src="js/opcion2.js"></script>
+</body>
+</html>
