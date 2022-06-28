@@ -6,17 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabajando con JavaScript</title>
 </head>
-<body>
-    <h1>--> Calcular el Valor a pagar en una llamada Telefonica</h1>
+<body bgcolor="#A6C2BA">
+    <h1>--> My calculadora con JavaScript</h1>
 
-    <h2>2° Ejercicio:</h2>
-    <!-- <p>Una empresa de llamadas telefonicas, necesita un programa que le calcule el costopor llamada. Debe tener en cuenta:<br>
-        <br>
-         A Fijo: 0.20 centimos por minuto<br>
-         A Claro: 0.40 centimos por minuto<br>
-         A Movistar: 0.60 centimos por minuto<br>
-         A Entel: 1 sol el minuto<br></p>
-         <hr> -->
+    <h2>Funciones:</h2>
+    <form id="miCalculadora">
+        <b>1° Número: <input type="text" id="num1" placeholder="Ingrese un número"> <button onclick="limpiar();"><b>Limpiar</b></button><hr>
+        2° Número: <input type="text" id="num2" placeholder="Ingrese otro número"><br><br>  <!-- 'onclick- es un evento'#CAD9B0 #47D693 #49BFAA-->
+        <input type="button" style="color:hsl(34, 98%, 51%);" value="    Sumar       " onclick="sumar();">
+        <input type="button" style="color:hsl(34, 98%, 51%);" value="    Restar      " onclick="restar();">
+        <input type="button" style="color:hsl(34, 98%, 51%);" value="    Multiplicar       " onclick="multiplicar();">
+        <input type="button" style="color:hsl(34, 98%, 51%);" value="    Dividir       " onclick="dividir();">
+        <input type="button" style="color:hsl(34, 98%, 51%);" value="    Potencia      " onclick="potencia();">
+        <input type="button" style="color:hsl(34, 98%, 51%);" value="    Residuo       " onclick="residuo();">
+
+    </form><center>
+    <h2><b><p style="color:blue;">Resultado: <i style="color:red;"><span id="resp"></span></p></h2>
+    <p>Fecha: <span id="fecha"></span></p>
+    <p>Hora: <span id="hora"></span></p>
+        <br><br><br><br><br>
+    <h2><marquee behavior="" direction="">Gracias... Buenas Noches</marquee></h2>
 
     <script src="js/ejercicio.js"></script>
 </body>

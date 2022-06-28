@@ -58,7 +58,7 @@ else if(prom>13){
 } 
 ====================================================================================================================================*/
 
-document.write(`<i>Una empresa de llamadas telefonicas, necesita un programa que calcule el costo por llamada. Tener en cuenta lo siguiente:<br>
+/* document.write(`<i>Una empresa de llamadas telefonicas, necesita un programa que calcule el costo por llamada. Tener en cuenta lo siguiente:<br>
 <br>
 A Fijo: 0.20 centimos por minuto<br>
 A Claro: 0.40 centimos por minuto<br>
@@ -71,14 +71,16 @@ let operador;
 const oFijo = 0.20;
 const oClaro = 0.40;
 const oMovistar = 0.60;
+const oBitel = 0.80;
 const oEntel = 1.00;
 
 minutos = parseFloat(prompt('Tiempo de llamada: '));
-operador = prompt('Digite su Operador: \n1.- Fijo \n2.- Claro \n3.- Movistar \n4.- Entel');
+operador = prompt('Digite su Operador: \n1.- Fijo \n2.- Claro \n3.- Movistar \n4.- Bitel \n5.- Entel');
 
 let cFijo = minutos * oFijo;
 let cClaro = minutos * oClaro;
 let cMovistar = minutos * oMovistar;
+let cBitel = minutos * oBitel;
 let cEntel = minutos * oEntel;
 
 if(operador==1){
@@ -91,8 +93,133 @@ else if(operador==3){
 document.write(`- Duración de llamada ${minutos} minutos <br><br>- Debera cancelar a su operador <b>Movistar</b> la suma de:<br><br> <center>Total a pagar: S/. ${cMovistar} <br>`)}
 
 else if(operador==4){
-document.write(`- Duración de llamada ${minutos} minutos <br><br>- Debera cancelar a su operador <b>Entel</b> la suma de:<br><br> <center>Total a pagar: S/. ${cEntel} <br>`)
-}
+document.write(`- Duración de llamada ${minutos} minutos <br><br>- Debera cancelar a su operador <b>Bitel</b> la suma de:<br><br> <center>Total a pagar: S/. ${cBitel} <br>`)}
+
+else if(operador==5){
+document.write(`- Duración de llamada ${minutos} minutos <br><br>- Debera cancelar a su operador <b>Entel</b> la suma de:<br><br> <center>Total a pagar: S/. ${cEntel} <br>`)}
+
 else{
     alert("Operador fuera de servicio")
+}====================================================================== */
+
+//let num=1;
+/* for(let i=1;i<=6;i++){
+    document.write("<h" +i+">Hola Mundo</h" +i+">");
+} */
+
+/* for(let i=2;i<=20;i++){
+    document.write(i+ "<hr>")
+    if(i==15){
+        //break;
+        continue;
+    }
+}
+for(let i=2;i<=20;i+=2){
+    document.write(i+"<br>")
+} */
+/* let x=3;
+while(x<=30){
+    document.write(x+"<hr>")
+    x+=3; //x=x+3
+} */
+/* let f=1;
+let acum=0;
+do{
+    acum=acum+f;
+    f++;
+}while(f<=20);
+document.write(acum); */
+
+/* function hola(){
+    alert("Bienvenido a las funciones"); //Funcion sin argumentos
+}
+hola("Bienvenido a las funciones");
+
+//funciones con argumentos
+function hello(nombre){
+    alert("Bienvenido a las funciones "+nombre); //document.write
+}
+let nom=prompt("Ingresa tu nombre");
+hello(nom); */
+
+/* //funcion anonima
+let multiplica = function(numero1,numero2){
+    let n1=numero1;
+    let n2=numero2;
+    let multi=n1*n2;
+    return multi;
+}
+document.write(multiplica(7,9));*/
+
+//funcion normal
+function limpiar(){
+    document.getElementById("miCalculadora").reset();
+}
+function muestraFecha(){
+    let fecha;
+    fecha = new Date();
+    let cadena = fecha.getDay()+"/"+(fecha.getMonth()+1)+"/"+fecha.getFullYear();
+    return cadena;
+}
+document.getElementById("fecha").innerHTML= muestraFecha();
+
+function muestraHora(){
+    let hora;
+    hora = new Date();
+    let cadena = hora.getHours()+":"+hora.getMinutes()+":"+hora.getSeconds();
+    return cadena;
+}
+document.getElementById("hora").innerHTML= muestraHora();
+
+function multiplica(numero1,numero2){
+    let n1 = numero1;
+    let n2 = numero2;
+    let multi = n1*n2;
+    return multi;
+}
+function sumar(){
+    let num1 = parseFloat(document.getElementById("num1").value);
+    let num2 = parseFloat(document.getElementById("num2").value);
+    let sum = num1 + num2;
+    document.getElementById("resp").innerHTML= sum;
+}
+
+//Resta
+function restar(){
+    let num1 = parseFloat(document.getElementById("num1").value);
+    let num2 = parseFloat(document.getElementById("num2").value);
+    let rest = num1 - num2;
+    document.getElementById("resp").innerHTML= rest;
+}
+
+//Multiplicación
+function multiplicar(){
+    let num1 = parseFloat(document.getElementById("num1").value);
+    let num2 = parseFloat(document.getElementById("num2").value);
+    let mult = num1 * num2;
+    document.getElementById("resp").innerHTML= mult;
+}
+
+//División
+function dividir(){
+    let num1 = parseFloat(document.getElementById("num1").value);
+    let num2 = parseFloat(document.getElementById("num2").value);
+    let div = num1 / num2;
+    document.getElementById("resp").innerHTML= div;
+}
+
+//Potencia
+function potencia(){
+    let num1 = parseFloat(document.getElementById("num1").value);
+    let num2 = parseFloat(document.getElementById("num2").value);
+    let pot = num1 ** num2;
+    parseFloat(document.getElementById("resp").innerHTML= pot);
+}
+
+//Residuo
+function residuo(){
+    let num1 = parseFloat(document.getElementById("num1").value);
+    let num2 = parseFloat(document.getElementById("num2").value);
+    let resid = num1 % num2;
+    document.getElementById("resp").innerHTML= resid;
 }
